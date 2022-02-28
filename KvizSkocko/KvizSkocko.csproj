@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53A9A089-8CBC-4012-8ACE-093F12B1427E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KvizSkocko</RootNamespace>
+    <AssemblyName>KvizSkocko</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBodovanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBodovanje.Designer.cs">
+      <DependentUpon>FormBodovanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IstekloVrijemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IstekloVrijemeForm.Designer.cs">
+      <DependentUpon>IstekloVrijemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PocetakIgre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PocetakIgre.Designer.cs">
+      <DependentUpon>PocetakIgre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBodovanje.resx">
+      <DependentUpon>FormBodovanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IstekloVrijemeForm.resx">
+      <DependentUpon>IstekloVrijemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PocetakIgre.resx">
+      <DependentUpon>PocetakIgre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmajliPrepravljen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrefPrepravljen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SrcePrepravljeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KaroPrepravljen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZvijezdaPrepravljena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikKONACNI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A 1-1-1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Podloga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PozadinaTamna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikKONACNI1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikProvjera33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B 1-1-2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C 1-2-2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D 1-1-1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E 1-1-3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F 1-3-3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G 2-2-2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H 2-2-2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I 2-2-3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J 2-3-3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\K 1-1-2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L 1-2-2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M 1-2-3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N 3-3-3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bodovanje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BodovanjeKONACNO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UputstvoSlikaPrva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UputstvoSlikaDruga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UputstvoSlikaCetvrta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UputstvoSlikaPeta.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
